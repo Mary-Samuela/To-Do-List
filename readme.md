@@ -1,4 +1,4 @@
-**About the page**
+**About the page** <br/>
 **To-Do List** project that allows users to **add**, **mark as done**, and **remove** tasks.  
 Built using **object-oriented JavaScript**, with a focus on **Test-Driven Development (TDD)** and clean, modular design.
 
