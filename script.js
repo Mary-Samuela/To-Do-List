@@ -5,13 +5,13 @@ class ToDoList {
         this.tasks = [];
     }
 
-    addtTask(title) {
+    addTask(title) {
         this.tasks.push({title, done:false});
     }
 
     markDone(index) {
         if (index >=0 && index <this.tasks.length) {
-            this.tasks[index].done = true;
+            this.tasks[index].done = !this.tasks[index].done;
         }
     }
 
@@ -34,7 +34,7 @@ const taskList = document.getElementById("taskList");
 addBtn.addEventListener("click", () => {
     const title = taskInput.value.trim();
     if (title) {
-        todo.addtTask(title);
+        todo.addTask(title);
         taskInput.value = "";
         render();
     }
@@ -51,15 +51,15 @@ function render() {
         const actions = document.createElement("div");
 
         const doneBtn = document.createElement("button");
-        doneBtn.textContent = "v"
-        doneBtn.onClick = () => {
+        doneBtn.textContent = "✅"
+        doneBtn.onclick = () => {
             todo.markDone(index);
             render();
         };
 
 
         const removeBtn = document.createElement("button");
-        removeBtn.textContent = "#";
+        removeBtn.textContent = "❌";
         removeBtn.onclick = () => {
             todo.removeTask(index);
             render();
