@@ -3,19 +3,24 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:center;
     background: #E3D888;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 .container {
     margin-top: 60px;
     background: white;
-    padding: 20px 30px;
+    padding: 25px;
     border-radius: 10px;
-    width: 300px;
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    flex-grow: 1;
 }
 
 .input-area {
@@ -51,4 +56,14 @@ li {
     text-decoration: line-through;
     color: gray;
     opacity: 0.7;
+}
+
+footer {
+    text-align:center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+
+
 }
